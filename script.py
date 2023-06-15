@@ -1,4 +1,4 @@
-def play_fizzbuzz(maxValue:int)->None:
+def play_fizzbuzz(maxValue: int) -> None:
     for i in range(1, maxValue + 1):
         if i % 3 == 0 and i % 5 == 0:
             print("Fizz Buzz")
@@ -15,3 +15,9 @@ if __name__ == "__main__":
 
 # add comments and tests
 # don't use a whilem don't print the number if there is a Fizz, a Buzz or both
+# add 7, 11
+
+# use venv, black and mypy
+# . venv/bin/activate
+# black script.py
+# mypy --strict script.py 
