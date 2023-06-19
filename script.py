@@ -1,25 +1,26 @@
-emptyString = ""
 
-def play_fizzbuzz(maxValue: int) -> None:
-    for i in range(1, maxValue + 1):
-        result = emptyString
-        OneCondition(i,3, "Fizz ")
-        OneCondition(i,5, "Buzz ")
-        OneCondition(i,7, "Toto ")
-        OneCondition(i,11, "Tata")
-        if(result == ""):
-            print(i)
-        else:
-            print(result)
+class Game():
+    emptyString:str = ""
+    result:str = emptyString
 
+    def play_fizzbuzz(self,maxValue: int) -> None:
+        for i in range(1, maxValue + 1):
+            self.result = self.emptyString
+            self.OneCondition(i,3, "Fizz ")
+            self.OneCondition(i,5, "Buzz ")
+            self.OneCondition(i,7, "Toto ")
+            self.OneCondition(i,11, "Tata")
+            if(self.result == ""):
+                print(i)
+            else:
+                print(self.result)
 
-def OneCondition(i: int,multiple: int,texte: str) -> str:
-    if(i % multiple == 0):
-        result += texte
-    return ""
-
+    def OneCondition(self,i: int,multiple: int,texte: str) -> str:
+        if(i % multiple == 0):
+            self.result += texte
+        return ""
 if __name__ == "__main__":
-    play_fizzbuzz(100)
+    Game().play_fizzbuzz(100)
 
 # add comments and tests
 # don't use a whilem don't print the number if there is a Fizz, a Buzz or both
