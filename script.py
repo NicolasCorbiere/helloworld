@@ -1,17 +1,25 @@
+emptyString = ""
+
 def play_fizzbuzz(maxValue: int) -> None:
     for i in range(1, maxValue + 1):
-        if i % 3 == 0 and i % 5 == 0:
-            print("Fizz Buzz")
-        elif i % 3 == 0:
-            print("Fizz")
-        elif i % 5 == 0:
-            print("Buzz")
-        else:
+        result = emptyString
+        OneCondition(i,3, "Fizz ")
+        OneCondition(i,5, "Buzz ")
+        OneCondition(i,7, "Toto ")
+        OneCondition(i,11, "Tata")
+        if(result == ""):
             print(i)
+        else:
+            print(result)
 
+
+def OneCondition(i: int,multiple: int,texte: str) -> str:
+    if(i % multiple == 0):
+        result += texte
+    return ""
 
 if __name__ == "__main__":
-    play_fizzbuzz(25)
+    play_fizzbuzz(100)
 
 # add comments and tests
 # don't use a whilem don't print the number if there is a Fizz, a Buzz or both
