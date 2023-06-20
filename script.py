@@ -19,8 +19,28 @@ class Game():
         if(i % multiple == 0):
             self.result += texte
         return ""
+    
+emptyString:str = ""
+
+def play_fizzbuzz(maxValue: int) -> None:
+    for i in range(1, maxValue + 1):
+        result = emptyString
+        result += OneCondition(i,3, "Fizz ")
+        result += OneCondition(i,5, "Buzz ")
+        result += OneCondition(i,7, "Toto ")
+        result += OneCondition(i,11, "Tata")
+        if(result == ""):
+            print(i)
+        else:
+            print(result)
+
+def OneCondition(i: int,multiple: int,texte: str) -> str:
+    if(i % multiple == 0):
+        return texte
+    return ""
 if __name__ == "__main__":
-    Game().play_fizzbuzz(100)
+    play_fizzbuzz(100)
+    #Game().play_fizzbuzz(100)
 
 # add comments and tests
 # don't use a whilem don't print the number if there is a Fizz, a Buzz or both
